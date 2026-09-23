@@ -1,23 +1,63 @@
 aid: amprion-gmbh
+
 name: Amprion
-description: 'Amprion is a company surfaced via the API Evangelist harvest backlog (source: energy) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.amprion.net/Bilder/Social-Media-Logos/amprion-default-img.png
+
+description: 'Amprion is a leading European transmission system operator managing a high‑voltage electricity grid spanning over 11,000 km across Germany. It connects renewable energy sources, ensures reliable power supply for millions, and drives grid expansion and sustainability initiatives.'
+
 url: https://raw.githubusercontent.com/api-evangelist/amprion-gmbh/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:energy
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
 - Company
-apis: []
+- Energy
+- Transmission
+- Grid
+- Infrastructure
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/amprion-gmbh-llms.txt
+- type: Hosts
+  url: hosts/amprion-gmbh-hosts.yml
+- type: Leadership
+  url: https://www.amprion.net/Ueber-uns/Management/
+- type: DomainSecurity
+  url: security/amprion-gmbh-domain-security.yml
 - type: Website
   url: https://www.amprion.net/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: "Amprion provides no public developer program or API documentation."
+  evidence:
+    - url: https://www.amprion.net/
+      status: 200
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
